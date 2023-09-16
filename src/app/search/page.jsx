@@ -10,6 +10,8 @@ import axios from "axios"
 
 const Search = () => {
 
+    const API_KEY = "612b44b2e76975e56349bbee009d0a3f";
+
     const [isLoading, setIsLoading] = useState(false);
     const [content, setContent ] = useState([]);
     const [page, setPage ] = useState(1);
@@ -30,7 +32,7 @@ const Search = () => {
         setIsLoading(true);
         try {
             const data = await axios.get(
-                `https://api.themoviedb.org/3/search/movie?api_key=${process.env.NEXT_PUBLIC_MOVIE_API_KEY}&language=en-US&page=1&include_adult=false&query=${searchText}`
+                `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&query=${searchText}`
             );
 
             const {results} = await data.json();

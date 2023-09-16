@@ -10,7 +10,7 @@ const MovieDetailsPage = ({ params }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [movie, setMovie] = useState(null);
 
-    const MOVIE_API_KEY = process.env.NEXT_PUBLIC_MOVIE_API_KEY;
+    const MOVIE_API_KEY = '612b44b2e76975e56349bbee009d0a3f';
     const router = useRouter();
     const {id } = params;
 
